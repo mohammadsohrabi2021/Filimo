@@ -3,11 +3,8 @@ import { GetStaticPropsContext } from 'next'
 import { api } from '../api/api'
 import MovieCard from '../components/common/MovieCard'
 import MoviesContainer from '../components/common/MoviesContainer'
+import { dataCart } from '../data/dataCart'
 
-import image1 from '../assets/image/image1.jpg'
-import image2 from '../assets/image/image2.jpg'
-import image3 from '../assets/image/image3.png'
-import image4 from '../assets/image/image4.jpg'
 
 
 export default function Home({movies} : {movies: {image:string}[]}) {
@@ -15,10 +12,11 @@ export default function Home({movies} : {movies: {image:string}[]}) {
   return (
     <Grid container p={2}>
       <MoviesContainer title={'ویژه'} link={'/animation'}>
-        <MovieCard image={image1} size={'Horizontal'} />
+        {/* <MovieCard image={image1} size={'Horizontal'} />
         <MovieCard image={image2} size={'Horizontal'} />
         <MovieCard image={image3} size={'Horizontal'} />
-        <MovieCard image={image4} size={'Horizontal'} />
+        <MovieCard image={image4} size={'Horizontal'} /> */}
+        {dataCart.map(item => <MovieCard title={item.title} image={item.image}  size={'Horizontal'} />)}
       </MoviesContainer>
       <MoviesContainer title={'تازه ها'} link={'drama'}>
         {movies.slice(9, 17).map(movie => <MovieCard image={movie.image} size={'Vertical'} />)}
