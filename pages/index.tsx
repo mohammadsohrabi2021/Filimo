@@ -19,7 +19,7 @@ export default function Home({movies} : {movies: {image:string}[]}) {
         {dataCart.map(item => <MovieCard title={item.title} image={item.image}  size={'Horizontal'} />)}
       </MoviesContainer>
       <MoviesContainer title={'تازه ها'} link={'drama'}>
-        {movies.slice(9, 17).map(movie => <MovieCard image={movie.image} size={'Vertical'} />)}
+        {/* {movies.slice(9, 17).map(movie => <MovieCard image={movie.image} size={'Vertical'} />)} */}
       </MoviesContainer>
     </Grid>
   )
