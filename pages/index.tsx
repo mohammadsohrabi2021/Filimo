@@ -4,10 +4,10 @@ import { api } from '../api/api'
 import MovieCard from '../components/common/MovieCard'
 import MoviesContainer from '../components/common/MoviesContainer'
 
-import image1 from '../assets/image/flash35.jpg'
-import image2 from '../assets/image/share.jpg'
-import image3 from '../assets/image/image.jpg'
-import image4 from '../assets/image/share.jpg'
+import image1 from '../assets/image/image1.jpg'
+import image2 from '../assets/image/image2.jpg'
+import image3 from '../assets/image/image3.png'
+import image4 from '../assets/image/image4.jpg'
 
 
 export default function Home({movies} : {movies: {image:string}[]}) {
