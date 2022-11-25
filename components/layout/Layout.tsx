@@ -24,7 +24,7 @@ const Layout = ({children}: LayoutPropsType) => {
     return (
         <Grid>
             <Grid container width={'100%'} height={50} sx={{background: 'rgba(0,0,0,.8)'}}>
-                <Grid container item xs={8} alignItems={'center'}>
+                <Grid container item xs={9} alignItems={'center'}>
                     <Grid display={'flex'} item xs={1.5} justifyContent={'center'}>
                         <Image src={Logo} alt={'logo'} width={80} height={25}/>
                     </Grid>
@@ -33,7 +33,7 @@ const Layout = ({children}: LayoutPropsType) => {
                     </Grid>
                     {dataTitleNavbar.map(item => <DropMenu title={item.title} data={item.data}/>)}
                 </Grid>
-                <Grid display={'flex'} item xs={4} justifyContent={'flex-end'}>
+                <Grid display={'flex'} item xs={3} justifyContent={'flex-end'}>
                     <Grid display={'flex'} alignItems={'center'} ml={2} sx={{cursor: 'pointer'}}>
                         <Avatar sx={{width: 30, height: 30}}>
                             <PersonRoundedIcon/>
