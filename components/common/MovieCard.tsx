@@ -7,7 +7,7 @@ import Image, {StaticImageData} from 'next/image'
 interface MovieCardPropsType {
     image: string | StaticImageData,
     size: 'Horizontal' | 'Vertical',
-    title:string
+    title:string |any
 }
 
 const MovieCard = ({image, size,title}: MovieCardPropsType) => {

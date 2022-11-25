@@ -7,7 +7,7 @@ import { dataCart } from '../data/dataCart'
 
 
 
-export default function Home({movies} : {movies: {image:string}[]}) {
+export default function Home({movies} : {movies: {image:string,title:string}[]}) {
   console.log(movies)
   return (
     <Grid container p={2}>
@@ -15,10 +15,10 @@ export default function Home({movies} : {movies: {image:string}[]}) {
         {dataCart.map(item => <MovieCard title={item.title} image={item.image}  size={'Horizontal'} />)}
       </MoviesContainer>
       <MoviesContainer title={'تازه ها'} link={'drama'}>
-        {movies.slice(9, 17).map(movie => <MovieCard image={movie.image} size={'Vertical'} />)}
+        {movies.slice(9, 17).map(movie => <MovieCard image={movie.image}title={movie.title} size={'Vertical'} />)}
       </MoviesContainer>
       <MoviesContainer title={'داغ ترین ها'} link={'drama'}>
-        {movies.slice(17, 25).map(movie => <MovieCard image={movie.image} size={'Vertical'} />)}
+        {movies.slice(17, 25).map(movie => <MovieCard image={movie.image}title={movie.title} size={'Vertical'} />)}
       </MoviesContainer>
     </Grid>
   )
