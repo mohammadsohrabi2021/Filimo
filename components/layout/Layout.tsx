@@ -28,7 +28,7 @@ const Layout = ({children}: LayoutPropsType) => {
                     <Grid display={'flex'} item xs={1.5} justifyContent={'center'}>
                         <Image src={Logo} alt={'logo'} width={80} height={25}/>
                     </Grid>
-                    <Grid display={'flex'} item xs={1} justifyContent={'center'} height={'50%'} alignItems={'center'}>
+                    <Grid display={{xs:'none',md:'flex'}} item xs={1} justifyContent={'center'} height={'50%'} alignItems={'center'}>
                         <Divider sx={{backgroundColor: '#E0E0E0'}} orientation="vertical" variant="middle"/>
                     </Grid>
                     {dataTitleNavbar.map(item => <DropMenu title={item.title} data={item.data}/>)}

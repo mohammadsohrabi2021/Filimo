@@ -1,10 +1,15 @@
+@font-face {
+  font-family: vazir;
+  src: url('./../assets/font/Vazirmatn-v.woff2');
+}
 html,
 body {
   direction: rtl;
+  font-size: 14px;
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: vazir, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
