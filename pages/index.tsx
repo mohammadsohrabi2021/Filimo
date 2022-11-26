@@ -12,15 +12,19 @@ export default function Home({ movies }: { movies: { image: string, title: strin
   return (
     <Grid container p={2} >
       <MoviesContainer title={'ویژه'} link={'/animation'}>
-        <Grid  display={'flex'}gap={1} sx={{overflow:'auto'}}>
+        <Grid display={'flex'} gap={1} sx={{ overflow: 'auto' }}>
           {dataCart.map(item => <MovieCard title={item.title} image={item.image} rating={item.rating} year={item.year} size={'Horizontal'} />)}
         </Grid>
       </MoviesContainer>
       <MoviesContainer title={'تازه ها'} link={'drama'}>
-        {movies.slice(9, 17).map(movie => <MovieCard image={movie.image} title={movie.title} rating={movie.rating} year={movie.year} size={'Vertical'} />)}
+        <Grid display={'flex'} gap={1} sx={{ overflow: 'auto' }}>
+          {movies.slice(9, 17).map(movie => <MovieCard image={movie.image} title={movie.title} rating={movie.rating} year={movie.year} size={'Vertical'} />)}
+        </Grid>
       </MoviesContainer>
       <MoviesContainer title={'داغ ترین ها'} link={'drama'}>
-        {movies.slice(17, 25).map(movie => <MovieCard image={movie.image} title={movie.title} rating={movie.rating} year={movie.year} size={'Vertical'} />)}
+        <Grid display={'flex'} gap={1} sx={{ overflow: 'auto' }}>
+          {movies.slice(17, 25).map(movie => <MovieCard image={movie.image} title={movie.title} rating={movie.rating} year={movie.year} size={'Vertical'} />)}
+        </Grid>
       </MoviesContainer>
     </Grid>
   )
