@@ -29,11 +29,11 @@ const Layout = ({ children }: LayoutPropsType) => {
                         <Divider sx={{ backgroundColor: '#E0E0E0' }} orientation="vertical" variant="middle" />
                     </Grid>
                     <Grid display={{ xs: 'none', md: 'flex' }} item xs={9} justifyContent={'flex-start'} gap={1}>
-                        {dataTitleNavbar.map(item => <DropMenu title={item.title} data={item.data} />)}
+                        {dataTitleNavbar.map(item => <DropMenu key={item.id} title={item.title} data={item.data} />)}
                     </Grid>
                 </Grid>
-                <Grid display={'flex'} item xs={1} justifyContent={'flex-end'}>
-                    <Grid display={'flex'} alignItems={'center'} justifyContent={'center'} ml={2} sx={{ cursor: 'pointer' }}>
+                <Grid display={'flex'} item container xs={1} justifyContent={'flex-end'}>
+                    <Grid item display={'flex'} alignItems={'center'} justifyContent={'center'} ml={2} sx={{ cursor: 'pointer' }}>
                         <Typography display={{ xs: 'flex', md: 'none' }} pl={1} color={'common.white'}><SearchIcon/></Typography>
                         <Avatar sx={{ width: 30, height: 30 }}>
                             <PersonRoundedIcon />
@@ -42,7 +42,7 @@ const Layout = ({ children }: LayoutPropsType) => {
                     </Grid>
                 </Grid>
                 <Grid display={{ xs: 'flex', md: 'none' }} sx={{overflow:'scroll'}} item xs={12} justifyContent={'flex-start'} gap={3}pr={{sm:'30px'}} >
-                    {dataTitleNavbar.slice(0,7).map(item => <DropMenu title={item.title} data={item.data} />)}
+                    {dataTitleNavbar.slice(0,7).map(item => <DropMenu key={item.id} title={item.title} data={item.data} />)}
                 </Grid>
             </Grid>
             {children}

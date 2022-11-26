@@ -15,29 +15,29 @@ export default function Home({ movies }: { movies: { image: string, title: strin
     <Grid container p={2} >
       <MoviesContainer title={'ویژه'} link={'/animation'}>
         <Grid display={'flex'} gap={1} sx={{ overflow: 'auto' }}>
-          {dataCart.map(item => <MovieCard title={item.title} image={item.image} rating={item.rating} year={item.year} size={'Horizontal'} />)}
+          {dataCart.map(item => <MovieCard key={item.id} title={item.title} image={item.image} rating={item.rating} year={item.year} size={'Horizontal'} />)}
         </Grid>
       </MoviesContainer>
-      <MoviesContainer title={'تازه ها'} link={'drama'}>
+      {/* <MoviesContainer title={'تازه ها'} link={'drama'}>
         <Grid display={'flex'} gap={1} sx={{ overflow: 'auto' }}>
-          {movies.slice(9, 17).map(movie => <MovieCard image={movie.image} title={movie.title} rating={movie.rating} year={movie.year} size={'Vertical'} />)}
+          {movies.slice(9, 17).map(movie => <MovieCard key={item.id} image={movie.image} title={movie.title} rating={movie.rating} year={movie.year} size={'Vertical'} />)}
         </Grid>
       </MoviesContainer>
       <MoviesContainer title={'داغ ترین ها'} link={'drama'}>
         <Grid display={'flex'} gap={1} sx={{ overflow: 'auto' }}>
-          {movies.slice(17, 25).map(movie => <MovieCard image={movie.image} title={movie.title} rating={movie.rating} year={movie.year} size={'Vertical'} />)}
+          {movies.slice(17, 25).map(movie => <MovieCard key={item.id} image={movie.image} title={movie.title} rating={movie.rating} year={movie.year} size={'Vertical'} />)}
         </Grid>
-      </MoviesContainer>
+      </MoviesContainer> */}
     </Grid>
     </>
   )
 }
-export async function getStaticProps(context: GetStaticPropsContext) {
-  const data = await api('/premiummovies')
-  const movies = data.data
-  return {
-    props: {
-      movies
-    },
-  }
-}
+// export async function getStaticProps(context: GetStaticPropsContext) {
+//   const data = await api('/premiummovies')
+//   const movies = data.data
+//   return {
+//     props: {
+//       movies
+//     },
+//   }
+// }

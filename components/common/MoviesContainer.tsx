@@ -13,7 +13,7 @@ interface MoviesContainerPropsType {
 const MoviesContainer = ({title, children, link}: MoviesContainerPropsType) => {
     return (
         <Grid container>
-            <Grid display={'flex'} item xs={12} justifyContent={'space-between'}>
+            <Grid display={'flex'} item xs={12} pb={2} justifyContent={'space-between'}>
                 <Grid>
                     <Typography fontWeight={'bold'}>
                         {title}

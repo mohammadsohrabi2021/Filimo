@@ -15,19 +15,19 @@ const DropMenu = ({title, data}: DropMenuPropsType) => {
     const [display, setDisplay] = useState<boolean>(false)
 
     return(
-        <Grid width={100} display={'flex'} item alignItems={'center'} height={'100%'} position={'relative'}
+        <Grid container width={100} display={'flex'} item alignItems={'center'} height={'100%'} position={'relative'}
               onMouseEnter={() => setDisplay(true)} onMouseLeave={() => setDisplay(false)}>
-            <Grid display={'flex'}
+            <Grid item display={'flex'}
                   sx={{cursor: 'pointer', color: 'common.white', '&:hover': {color: '#f9ad03'}}}>
                 <Typography>
                     {title}
                 </Typography>
                 {/* <KeyboardArrowDownRoundedIcon/> */}
             </Grid>
-            <Grid width={400} height={"auto"} bgcolor={'common.black'} display={display ? 'flex' : 'none'}
+            <Grid item container width={400} height={"auto"} bgcolor={'common.black'} display={display ? 'flex' : 'none'}
                   position={'absolute'} top={35} right={0} borderRadius={1} color={'common.white'} zIndex={99}
                   onMouseEnter={() => setDisplay(true)} onMouseLeave={() => setDisplay(false)}>
-                <Grid container p={1} display={data.length ===0 ? 'none':'flex'}>
+                <Grid item container p={1} display={data.length ===0 ? 'none':'flex'}>
                     {data.map( m => (
                         <Grid item xs={6} key={m.id}>
                             <Typography  sx={{cursor: 'pointer', color: 'common.white', '&:hover': {color: '#f9ad03'}}}>

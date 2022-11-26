@@ -17,7 +17,7 @@ import image5 from '../../assets/image/image5.jpg'
 import { Grid } from '@mui/material';
 export default function Slider() {
     return (
-        <Grid className={styles.container} xs={12} >
+        <Grid container className={styles.container} xs={12} >
             <Swiper
                 modules={[Navigation, EffectFade]}
                 navigation
