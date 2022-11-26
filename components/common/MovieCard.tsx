@@ -14,10 +14,10 @@ interface MovieCardPropsType {
 
 const MovieCard = ({image, size,title,rating,year}: MovieCardPropsType) => {
     return (
-        <Grid item xs={size === 'Horizontal' ? 3 : 1.5} borderRadius={1} p={1}>
-            <Grid position={'relative'} borderRadius={1} sx={{cursor:'pointer'}}>
+        <Grid  item   display={'flex'} xs={size === 'Vertical' ? 3: 6} borderRadius={1} >
+            <Grid position={'relative'} borderRadius={1} sx={{cursor:'pointer'}} width={size === 'Vertical' ? 200 : 200}>
                 <Image width={200}
-                       height={size === 'Horizontal' ? 200 : 250}
+                       height={size === 'Horizontal' ? 250 : 250}
                        layout=""
                        style={{width: '100%', borderRadius: '4px'}}
                        src={image}

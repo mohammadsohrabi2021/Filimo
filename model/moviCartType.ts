@@ -3,5 +3,5 @@ export interface moviCartType {
     title:string,
     image:any | string,
     rating:string,
-    year:number
+    year:number,
 }
