@@ -30,7 +30,7 @@ const DropMenu = ({title, data}: DropMenuPropsType) => {
                 <Grid container p={1} display={data.length ===0 ? 'none':'flex'}>
                     {data.map( m => (
                         <Grid item xs={6} key={m.id}>
-                            <Typography sx={{cursor: 'pointer', color: 'common.white', '&:hover': {color: '#f9ad03'}}}>
+                            <Typography  sx={{cursor: 'pointer', color: 'common.white', '&:hover': {color: '#f9ad03'}}}>
                                 {m.title}
                             </Typography>
                         </Grid>
