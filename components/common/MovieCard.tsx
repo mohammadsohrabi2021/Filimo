@@ -7,10 +7,12 @@ import Image, {StaticImageData} from 'next/image'
 interface MovieCardPropsType {
     image: string | StaticImageData,
     size: 'Horizontal' | 'Vertical',
-    title:string |any
+    title:string |any,
+    rating:string,
+    year:number
 }
 
-const MovieCard = ({image, size,title}: MovieCardPropsType) => {
+const MovieCard = ({image, size,title,rating,year}: MovieCardPropsType) => {
     return (
         <Grid item xs={size === 'Horizontal' ? 3 : 1.5} borderRadius={1} p={1}>
             <Grid position={'relative'} borderRadius={1} sx={{cursor:'pointer'}}>
@@ -33,7 +35,7 @@ const MovieCard = ({image, size,title}: MovieCardPropsType) => {
                           flexDirection={'column'}
                           justifyContent={'flex-end'}
                           p={2} height={'100%'}>
-                        <Grid display={'flex'}>
+                        <Grid display={'flex'}py={1}>
                             <Grid display={'flex'}
                                   alignItems={'center'}
                                   justifyContent={'center'}
@@ -51,14 +53,17 @@ const MovieCard = ({image, size,title}: MovieCardPropsType) => {
                                   bgcolor={'gray'}
                                   sx={{borderRadius: '10px 0 0 10px'}}
                             >
-                                <Typography>
-                                    96%
+                                <Typography color={'common.white'}>
+                                    {rating}%
                                 </Typography>
                             </Grid>
                         </Grid>
                         <Grid color={'common.white'}>
-                            <Typography>
+                            <Typography pb={1}>
                                {title}
+                            </Typography>
+                            <Typography>
+                               {year}
                             </Typography>
                         </Grid>
                     </Grid>
