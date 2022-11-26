@@ -25,7 +25,7 @@ const DropMenu = ({title, data}: DropMenuPropsType) => {
                 {/* <KeyboardArrowDownRoundedIcon/> */}
             </Grid>
             <Grid width={400} height={"auto"} bgcolor={'common.black'} display={display ? 'flex' : 'none'}
-                  position={'absolute'} top={50} right={0} borderRadius={1} color={'common.white'} zIndex={99}
+                  position={'absolute'} top={35} right={0} borderRadius={1} color={'common.white'} zIndex={99}
                   onMouseEnter={() => setDisplay(true)} onMouseLeave={() => setDisplay(false)}>
                 <Grid container p={1} display={data.length ===0 ? 'none':'flex'}>
                     {data.map( m => (

@@ -20,6 +20,17 @@ a {
 * {
   box-sizing: border-box;
 }
+.swiper-button-next,
+.swiper-button-prev{
+  color: white !important;
+  opacity: 0.3;
+}
+.swiper-button-next:hover{
+  opacity: 1;
+}
+.swiper-button-prev:hover{
+  opacity: 1;
+}
 
 @media (prefers-color-scheme: dark) {
   html {
