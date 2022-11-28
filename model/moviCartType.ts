@@ -1,5 +1,5 @@
 export interface moviCartType {
-    id: number,
+    rank: number,
     title:string,
     image:any | string,
     rating:string,

@@ -23,7 +23,7 @@ export async function getStaticPaths(){
 
     return {
         paths:movies.map(m=>({params:{movieId:m.rank.toString()}})),
-        fallback: false
+        fallback: 'blocking'
     }
 }
 

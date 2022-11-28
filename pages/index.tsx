@@ -16,9 +16,9 @@ export default function Home({ movies }: { movies: { image: string, title: strin
       <Grid container p={2} >
         <MoviesContainer title={'ویژه'} link={'/animation'}>
           <Grid display={'flex'} gap={1} sx={{ overflow: 'auto' }}>
-            {dataCart.map(item =>
-              <Link href={`/movieCart/${item.id}`}>
-                <Grid> <MovieCard key={item.id} title={item.title} image={item.image} rating={item.rating} year={item.year} size={'Horizontal'} /></Grid>
+            {movies.slice(0, 9).map(movie =>
+              <Link href={`/movieCart/${movie.rank}`}>
+                <Grid> <MovieCard key={movie.rank} title={movie.title} image={movie.image} rating={movie.rating} year={movie.year} size={'Horizontal'} /></Grid>
               </Link>
             )}
           </Grid>
