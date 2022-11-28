@@ -30,8 +30,8 @@ export default function Slider() {
     return (
         <Grid container item className={styles.container} xs={12} >
             <Swiper ref={swiperRef}>
-                {dataSlider.map(slide => (<SwiperSlide>
-                    <Grid width={'100%'} height={400} position={'relative'}>
+                {dataSlider.map(slide => (<SwiperSlide key={slide.id}>
+                    <Grid  width={'100%'} height={400} position={'relative'}>
                         <Image style={{ width: '100%', height: '100%' }} src={slide.image} alt={slide.title} />
                         <Grid display={{ xs: 'none', md: 'flex' }} bottom={50} left={80} position={'absolute'}>
                             <Grid display={'flex'} alignItems={'center'} justifyContent={'center'} width={40} height={40} bgcolor={'common.black'} borderRadius={'50%'} color={'common.white'}>
