@@ -20,7 +20,7 @@ interface LayoutPropsType {
 const Layout = ({ children }: LayoutPropsType) => {
     return (
         <Grid >
-            <Grid xs={12} container width={'100%'} height={{xs:'80px',md:'50px'}}  sx={{ background: 'rgba(0,0,0,.8)' }} pr={{xs:'35px',md:'0px'}}>
+            <Grid item xs={12} container width={'100%'} height={{xs:'80px',md:'50px'}}  sx={{ background: 'rgba(0,0,0,.8)' }} pr={{xs:'35px',md:'0px'}}>
                 <Grid container item xs={11} alignItems={'center'} justifyContent={'flex-start'} >
                     <Grid display={'flex'} item xs={1.5} justifyContent={'center'}>
                         <Image src={Logo} alt={'logo'} width={80} height={25} />

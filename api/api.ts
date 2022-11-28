@@ -1,9 +1,9 @@
 import axios from "axios";
 
 export const api = axios.create({
-    baseURL:'https://imdb-top-100-movies.p.rapidapi.com',
-    headers: {
-        'X-RapidAPI-Key': '276c89c394msh21f377e488a3ca5p17c6a0jsn1a59d5b0c9cc',
-        'X-RapidAPI-Host': 'imdb-top-100-movies.p.rapidapi.com'
-    }
+  baseURL: "https://imdb-top-100-movies.p.rapidapi.com",
+  headers: {
+    "X-RapidAPI-Key": "dabeea4bd2msh3ce49274ccab7e2p1cb983jsn36cde7bd0b72",
+    "X-RapidAPI-Host": "imdb-top-100-movies.p.rapidapi.com",
+  },
 });
